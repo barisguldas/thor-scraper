@@ -8,10 +8,10 @@
 
 ##  Özellikler
 
-* ** Tam Gizlilik:** Tüm trafik `SOCKS5` protokolü üzerinden (127.0.0.1:9150) Tor ağına tünellenir. 
-* ** Ekran Görüntüsü Alma:** JavaScript tabanlı modern onion sitelerinin tam sayfa ekran görüntüsünü alır.
-* ** HTML Arşivleme:** Hedef sitelerin kaynak kodlarını `.txt` formatında kaydeder.
-* ** Detaylı Raporlama:** Taramaların durumunu, zaman damgaları ile birlikte `scan_report.log` dosyasına işler.
+*  Tam Gizlilik: Tüm trafik `SOCKS5` protokolü üzerinden (127.0.0.1:9150) Tor ağına tünellenir. 
+*  Ekran Görüntüsü Alma: JavaScript tabanlı modern onion sitelerinin tam sayfa ekran görüntüsünü alır.
+*  HTML Arşivleme: Hedef sitelerin kaynak kodlarını `.txt` formatında kaydeder.
+*  Detaylı Raporlama: Taramaların durumunu, zaman damgaları ile birlikte `scan_report.log` dosyasına işler.
 
 
 ---
