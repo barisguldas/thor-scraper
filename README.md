@@ -1,6 +1,6 @@
 #  THOR SCRAPER - Onion Network Crawler
 
-**Thor Scraper**; **Tor Ağı ** üzerindeki hedefleri güvenli bir şekilde tarayan, ekran görüntüsü alan ve kaynak kodlarını arşivleyen gelişmiş bir web scraping aracıdır.
+**Thor Scraper**; Tor Ağı üzerindeki hedefleri güvenli bir şekilde tarayan, ekran görüntüsü alan ve kaynak kodlarını arşivleyen gelişmiş bir web scraping aracıdır.
 
 **Siber Vatan** ve **Yıldız CTI** programı kapsamında geliştirilmiştir.
 
