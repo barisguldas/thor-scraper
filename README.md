@@ -26,7 +26,7 @@ Bu aracı çalıştırmak için sisteminizde aşağıdakilerin yüklü olması g
 
 ---
 
-## 📥 Kurulum
+##  Kurulum
 
 Projeyi yerel makinenize klonlayın ve gerekli bağımlılıkları indirin:
 
