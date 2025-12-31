@@ -31,8 +31,7 @@ Bu aracı çalıştırmak için sisteminizde aşağıdakilerin yüklü olması g
 Projeyi yerel makinenize klonlayın ve gerekli bağımlılıkları indirin:
 
 ```bash
-# Projeyi klonla
-git clone [https://github.com/KULLANICI_ADINIZ/thor-scraper.git](https://github.com/KULLANICI_ADINIZ/thor-scraper.git)
+
 
 # Proje dizinine gir
 cd thor-scraper
