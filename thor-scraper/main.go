@@ -97,7 +97,6 @@ func startScraping() {
 		}
 		count++
 
-		// Her site için yeni context
 		ctx, cancel := chromedp.NewContext(allocCtx)
 		ctx, cancel = context.WithTimeout(ctx, 60*time.Second) // 60sn zaman aşımı
 
@@ -109,7 +108,7 @@ func startScraping() {
 	fmt.Printf(color.HiGreenString("[OK] Tarama Tamamlandı. Toplam %d hedef denendi.\n"), count)
 }
 
-// --- FONKSİYON 2: SCRAPE DETAYI ---
+
 func scrapeOnionSite(ctx context.Context, url string) {
 	fmt.Printf(color.HiCyanString(" -> Taranıyor: %s ... "), url)
 
@@ -118,7 +117,7 @@ func scrapeOnionSite(ctx context.Context, url string) {
 
 	err := chromedp.Run(ctx,
 		chromedp.Navigate(url),
-		chromedp.Sleep(5*time.Second), // Bekleme süresi
+		chromedp.Sleep(5*time.Second), 
 		chromedp.OuterHTML("html", &htmlContent),
 		chromedp.FullScreenshot(&screenshot, 90),
 	)
@@ -135,7 +134,7 @@ func scrapeOnionSite(ctx context.Context, url string) {
 	safeName = strings.ReplaceAll(safeName, ".onion", "")
 	safeName = strings.ReplaceAll(safeName, "/", "_")
 
-	// Eğer dosya adı çok uzunsa kısalt (Windows hatası olmasın)
+	
 	if len(safeName) > 50 {
 		safeName = safeName[:50]
 	}
@@ -178,22 +177,21 @@ func showTargets() {
 func logToReport(url, status string) {
 	logLine := fmt.Sprintf("[%s] URL: %s -> %s\n", time.Now().Format(time.RFC3339), url, status)
 	if _, err := reportLog.WriteString(logLine); err != nil {
-		// Log hatası kritik değil, ekrana basmaya gerek yok
 	}
 }
 
 func printBanner() {
-	// Renk Tanımları
-	logoColor := color.New(color.FgHiWhite, color.Bold).SprintFunc() // Logo: Kırmızı
-	titleColor := color.New(color.FgHiRed, color.Bold).SprintFunc()  // Başlık: Beyaz
-	subColor := color.New(color.FgWhite, color.Faint).SprintFunc()   // Alt Başlık: Soluk Beyaz
-	appColor := color.New(color.FgHiYellow, color.Bold).SprintFunc() // Uygulama Adı: Sarı
 
-	// Ekranı temizle
+	logoColor := color.New(color.FgHiWhite, color.Bold).SprintFunc()
+	titleColor := color.New(color.FgHiRed, color.Bold).SprintFunc()
+	subColor := color.New(color.FgWhite, color.Faint).SprintFunc()   
+	appColor := color.New(color.FgHiYellow, color.Bold).SprintFunc() 
+
+
 	fmt.Print("\033[H\033[2J")
 	fmt.Println()
 
-	// ASCII ART (Orta kısımdaki noktalar temizlendi)
+	
 	lines := []string{
 		"                                                            ",
 		"                                                            ",
@@ -225,12 +223,12 @@ func printBanner() {
 		"                                                            ",
 	}
 
-	// Döngü ile satırları basarken sağ tarafa yazıları ekliyoruz
+	
 	for i, line := range lines {
-		// Logoyu Kırmızı bas
+
 		fmt.Print(logoColor(line))
 
-		// Metinleri logonun sağına ekle
+	
 		if i == 12 {
 			fmt.Print(titleColor("   SİBER VATAN"))
 		}
@@ -244,13 +242,13 @@ func printBanner() {
 			fmt.Print(appColor("   THOR SCRAPER"))
 		}
 
-		// Satırı bitir
+
 		fmt.Println()
-		// Akış efekti
 		time.Sleep(5 * time.Millisecond)
 	}
 
 	fmt.Println()
 	time.Sleep(1 * time.Second)
 }
+
 
