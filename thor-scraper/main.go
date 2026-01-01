@@ -13,11 +13,11 @@ import (
 	"github.com/fatih/color"
 )
 
-// Raporlama için log dosyası (Global değişken)
+
 var reportLog *os.File
 
 func main() {
-	// 1. Log Dosyasını Hazırla
+	
 	var err error
 	reportLog, err = os.OpenFile("scan_report.log", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 	if err != nil {
@@ -25,7 +25,7 @@ func main() {
 	}
 	defer reportLog.Close()
 
-	// Banner'ı bir kere göster
+	
 	printBanner()
 
 	// --- ANA MENÜ DÖNGÜSÜ ---
@@ -253,3 +253,4 @@ func printBanner() {
 	fmt.Println()
 	time.Sleep(1 * time.Second)
 }
+
